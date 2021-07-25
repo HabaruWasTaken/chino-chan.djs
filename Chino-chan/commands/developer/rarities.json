@@ -1,0 +1,16 @@
+[{
+        "type": "Tier: 1",
+        "chance": 0
+    }, {
+        "type": "Tier: 2",
+        "chance": 35
+    }, {
+        "type": "Tier: 3",
+        "chance": 10
+    }, {
+        "type": "Tier: 4",
+        "chance": 5
+    }, {
+        "type": "Tier: 5",
+        "chance": 1
+}]

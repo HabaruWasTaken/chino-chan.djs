@@ -12,8 +12,8 @@ exports.run = async (client, message, args) => {
 				.replace(/@/g, '@' + String.fromCharCode(8203));
 		else return text;
 	}
-
-	if (!message.author.id == client.config.owners) return;
+	if (!client.config.owners.includes(message.author.id)) return;
+	
 	try {
 		const code = args.join(' ');
 		const embed1 = new Discord.MessageEmbed()
