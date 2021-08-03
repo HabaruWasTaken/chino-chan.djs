@@ -16,13 +16,30 @@ module.exports = async (client, message) => {
 
 	if (message.author.id == shoobId) {
 		if (!message.embeds[0]) return;
+		
+		/*if (message.embeds[0] && message.embeds[0]. description.includes('Issue #:')) {
+		  
+		  const auId = message.embeds[0].description.slice(2, 20)
+		  
+		  if (auId!="713284455875215381") return
+		  
+		  setTimeout(()=>{
+		  message.channel.send(`<@${auId}> ready to claim shoob card!`)
+		}, 120000)
+		}*/
 
-		if (message.embeds[0].title && message.embeds[0].title.includes('Tier:')) {
+		if (message.embeds[0]. description && message.embeds[0].description.includes('To claim,')) {
 			if (tset == false) return;
 			if (!tset == true) return;
 			let num = 15;
 			let tc;
-
+			
+			/*message.channel.send('<@713284455875215381>').then(m=>{
+			  setTimeout(()=>{
+			    m.delete()
+			  }, 15000)
+			})*/
+		
 			setInterval(() => {
 				num--;
 				if (num >= 11) {

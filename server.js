@@ -1,4 +1,9 @@
-<!doctype html>
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.all('/', (req, res)=>{
+  res.send(`<!doctype html>
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,3 +44,11 @@
       <div>
   </body>
 </html>
+`)
+})
+function keepAlive() {
+  app.listen(port, () => {
+  console.log(`server ready at http://localhost:${port}`)
+})}
+
+module.exports = keepAlive

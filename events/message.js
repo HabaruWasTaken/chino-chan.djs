@@ -99,6 +99,6 @@ mOwo(client, message)
 	} catch (error) {
 		console.log(error.message);
 	} finally {
-		console.log(`${sender.tag} (${sender.id}) ran a command: ${cmd}`);
+		console.log(`${sender.tag} (${sender.id}) ran ${cmd}`);
 	}
 };

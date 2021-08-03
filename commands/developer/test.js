@@ -6,8 +6,8 @@ const Canvas = require('canvas');
 const rarities = require('./rarities.json');
 var cards = require('./gacha_card.json');
 
-function pickRandom() {
-  // Calculate chances for common
+function pickRandom(){
+
   var filler =
     100 - rarities.map(r => r.chance).reduce((sum, current) => sum + current);
 

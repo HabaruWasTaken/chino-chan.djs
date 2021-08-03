@@ -7,7 +7,7 @@ module.exports = client => {
 
   readdir(`${homePath}/commands/`, (err, categories) => {
     if (err) console.log(err);
-    console.log(`[available] ${categories.length} category`);
+    console.log(`Found ${categories.length} category`);
     categories.forEach(category => {
       let moduleConf = require(`${homePath}/commands/${category}/module.json`);
       if (moduleConf) {
@@ -15,7 +15,7 @@ module.exports = client => {
         moduleConf.cmds = [];
         client.helps.set(category, moduleConf);
         readdir(`${homePath}/commands/${category}`, (err, files) => {
-          console.log(`[available] ${files.length - 1} cmds - ${category} category`);
+          console.log(`[${category}] ${files.length - 1} commands`);
           if (err) console.log(err);
           //let commands = new Array();
           files.forEach(file => {
